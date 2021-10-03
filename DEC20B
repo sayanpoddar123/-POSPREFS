@@ -1,0 +1,34 @@
+# cook your dish here
+d=int(input())
+for p in range(0,d):
+    lst = input().split()
+
+    k = int(lst[0])
+    n = int(lst[1])
+    if int(k/2)==n:
+        for i in range(1,k+1):
+            if i%2==0:
+                print(i,end=" ")
+            else:
+                print(-i,end=" ")
+    #print()
+
+    elif int(k/2)<n:
+        for i in range(1,k+1):
+            if i%2==0:
+                print(i,end=" ")
+            elif (i%2==1) and i<(2*(k-n)):
+
+                print(-i, end=" ")
+
+            else:
+
+                print(i,end=" ")
+    #print()
+
+    else:
+        for i in range(1, k + 1):
+            if i % 2 == 0 and i<=2*n+1:
+                print(i, end=" ")
+            else:
+                print(-i, end=" ")
